@@ -11,6 +11,10 @@ namespace GURU_CoMM
 
         }
 
+        public ApplicationDbContext()
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             var pet1 = new Pet()

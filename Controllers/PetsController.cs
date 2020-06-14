@@ -45,7 +45,7 @@ namespace GURU_CoMM.Controllers
             var query = context.Pets.AsQueryable();
             var recordsTotal = query.Count();
 
-            var entidades = await query
+            var entities = await query
                 .Skip(recordsQuantity * (pageNumber - 1))
                 .Take(recordsQuantity)
                 .ToListAsync();
@@ -55,23 +55,25 @@ namespace GURU_CoMM.Controllers
                 ((int)Math.Ceiling((double)recordsTotal / recordsQuantity)).ToString();
             Response.Headers.Add("POST", Url.Link("GetPets", null));
 
-            var dtos = mapper.Map<List<PetDto>>(entidades);
+            var dtos = mapper.Map<List<PetDto>>(entities);
             return dtos;
         }
 
         [HttpGet("{id:int}", Name = "GetPet")]
         public async Task<ActionResult<PetDto>> Get(long id)
         {
-            var entidad = await context.Pets.FirstOrDefaultAsync(x => x.Id == id);
+            var entity = await context.Pets.FirstOrDefaultAsync(x => x.Id == id);
 
-            if (entidad == null)
+            if (entity == null)
             {
                 return NotFound();
             }
 
-            var dto = mapper.Map<PetDto>(entidad);
-
-            return dto;
+            return new PetDto()
+            {
+                Id = entity.Id,
+                Name = entity.Name
+            };
         }
 
         [HttpPost(Name = "CreatePet")]
