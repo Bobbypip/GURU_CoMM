@@ -43,4 +43,4 @@ Esta sección muestra los ViewModels utilizados para la API asi como sus propied
 Para usar esta API con ejemplos mas claros en la app de Postman, puede usar este [Link](https://documenter.getpostman.com/view/10295654/SzzhdySk?version=latest) y lo dirigirá a documentacion de Postman para hacer uso de la API de forma local, en la parte superior derecha de la página encontrara el botón *Run in Postman* que le permitirá hacer uso de estos ejemplos en forma local, al presionalo le preguntara como desea abrir Postam, una vez seleccionado deberá de dar permiso en la ventana emergente superior y presionar *Open Postman*.
 
 ## Lint
-El linter utilizado pora el desarrollo del código C# fue [SonarLint](https://www.sonarlint.org/visualstudio/), puede ser descargado utilizado como una extensión del IDE.
+El linter utilizado para el desarrollo del código C# fue [SonarLint](https://www.sonarlint.org/visualstudio/), puede ser descargado utilizado como una extensión del IDE.
