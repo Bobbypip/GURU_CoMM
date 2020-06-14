@@ -64,18 +64,18 @@ Para usar esta API con ejemplos mas claros en la app de Postman, puede usar este
 ## Lint
 El linter utilizado para el desarrollo del código C# fue [SonarLint](https://www.sonarlint.org/visualstudio/), puede ser descargado y utilizado como una extensión del IDE Visual Studio.
 
-## Pruebas unitarias
+## Pruebas unitarias:  
 Para correr las pruebas unitarias es necesario agregar el proyecto que las contiene a nuestra solución, para hacer esto vamos al explorador de soluciones y damos click derecho sobre **Solution 'GURU-CoMM'** o **Solución 'GURU-CoMM'**, en la ventana que aparece seleccionamos Add o Agregar y después Existing Project... o Proyecto Existente..., vamos a la carpeta GURU_CoMM_UnitaryTests y dentro de ella abrimos el archivo GURU_CoMM_UnitaryTests.csproj.
 
-Se nos agregará el proyecto de pruebas unitarias a nuestra solución, para correrlas primero es necesario agregar una referecia al proyecto de pruebas de proyecto original, los pasos para hacer esto son los siguientes:
+Se nos agregará el proyecto de pruebas unitarias a nuestra solución, para correrlas primero es necesario agregar una referecia al proyecto de pruebas del proyecto original, los pasos para hacer esto son los siguientes:
 
 1. Click derecho sobre GURU_CoMM_UnitaryTests.
 2. Add o Agregar.
 3. Project Reference o Referencia de Projecto.
-4. En la eventa que acaba de aparecer del lado izquierdo seleccionar Projects o Proyectos y enseguida Solution o Solución.
+4. En la ventana que acaba de aparecer del lado izquierdo seleccionar Projects o Proyectos y enseguida Solution o Solución.
 5. Notará que solo existe un proyecto, este debe ser GURU_CoMM, del lado izquierdo seleccionelo al colocar la paloma en el cuadro de selección
 6. Una vez hecho esto, presione OK y la ventana se cerrará.
 
 Por último para realizar la pruebas, en la parte superior haga click sobre Test o Pruebas y después en Explorador de Pruebas o Test Explorer.
 
-En la ventana que se acaba de abrir notará las pruebas que pueden realizarse, para ello solo de click sobre el segundo icono de izquierda a derecha de Play(triángulo verde) y eso sera todo, las pruebas se ejecutarán.
+En la ventana que se acaba de abrir notará las pruebas que pueden realizarse, para ello solo de click sobre el segundo ícono de izquierda a derecha de Play(triángulo verde) y eso sera todo, las pruebas se ejecutarán.
