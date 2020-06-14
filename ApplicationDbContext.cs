@@ -32,6 +32,10 @@ namespace GURU_CoMM
             modelBuilder.Entity<Pet>().HasData(pet1);
             modelBuilder.Entity<Pet>().HasData(pet2);
             modelBuilder.Entity<Pet>().HasData(pet3);
+
+            modelBuilder.Entity<Pet>()
+                .Property(p => p.Id)
+                .HasColumnType("bigint");
         }
 
         public DbSet<Pet> Pets { get; set; }

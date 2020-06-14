@@ -10,7 +10,7 @@ namespace GURU_CoMM.Migrations
                 name: "Pets",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: false)
                 },
@@ -18,6 +18,21 @@ namespace GURU_CoMM.Migrations
                 {
                     table.PrimaryKey("PK_Pets", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Pets",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1L, "Luffy" });
+
+            migrationBuilder.InsertData(
+                table: "Pets",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 2L, "Ronny" });
+
+            migrationBuilder.InsertData(
+                table: "Pets",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 3L, "Senpai" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

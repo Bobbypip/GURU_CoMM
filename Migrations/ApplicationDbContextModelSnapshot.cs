@@ -20,9 +20,9 @@ namespace GURU_CoMM.Migrations
 
             modelBuilder.Entity("GURU_CoMM.Entities.Pet", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
@@ -36,17 +36,17 @@ namespace GURU_CoMM.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            Id = 1L,
                             Name = "Luffy"
                         },
                         new
                         {
-                            Id = 2,
+                            Id = 2L,
                             Name = "Ronny"
                         },
                         new
                         {
-                            Id = 3,
+                            Id = 3L,
                             Name = "Senpai"
                         });
                 });

@@ -60,7 +60,7 @@ namespace GURU_CoMM.Controllers
         }
 
         [HttpGet("{id:int}", Name = "GetPet")]
-        public async Task<ActionResult<PetDto>> Get(int id)
+        public async Task<ActionResult<PetDto>> Get(long id)
         {
             var entidad = await context.Pets.FirstOrDefaultAsync(x => x.Id == id);
 

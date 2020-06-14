@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GURU_CoMM.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200613033925_Initial")]
+    [Migration("20200614133452_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,9 +22,9 @@ namespace GURU_CoMM.Migrations
 
             modelBuilder.Entity("GURU_CoMM.Entities.Pet", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
@@ -34,6 +34,23 @@ namespace GURU_CoMM.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Pets");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Name = "Luffy"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Name = "Ronny"
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            Name = "Senpai"
+                        });
                 });
 #pragma warning restore 612, 618
         }
