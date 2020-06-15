@@ -13,6 +13,11 @@ Evaluación para proceso de selección
 Descague el archivo .zip de la liga proporcionada de Google Drive y descomprímalo en su ordenador.  
 En la carpeta resultante encontrará dos carpetas, GURU_CoMM y GURU_CoMM_UnitaryTests, abra Visual Studio y de click sobre **Open a project or solution** o **Abrir un projecto o una solución**, vaya a la capeta GURU_CoMM y haga doble click en el archivo GURU_CoMM.sln. Una vez hecho esto verá como aparece la ventana de Visual Studio y podrá comenzar a interactuar con el software.  
 
+Vaya a:
+
+**Vista/Explorador de soluciones/GURU_CoMM/Dependencias/Startup.cs**  
+**View/Solution Explorer/GURU_CoMM/Dependencies/Startup.cs**
+
 ## Dependencias:  
 Asegurarse de que las siguientes dependedecias esten disponibles:  
 - AutoMapper.Extensions.Microsoft.DependencyInjection
@@ -31,12 +36,12 @@ En caso de faltar alguna necesita ejecutar el comando en consola de administrado
 Ir a **Herramientas/Administrador de Paquetes NuGet/Consola de Administrador de paquetes.**  
 Ir a **Tools/NuGet Package Manager/Packege Manager Console.** 
 
-Una vez que la consola aparezca solo tiene que escribir el comando correspondiente para descargar una depencencia con ```Install-packege```
+Una vez que la consola aparezca solo tiene que escribir el comando correspondiente para descargar una depencencia con ```install-packege```
 
-Si la dependencia **Swashbuckle.AspNetCore** faltara solo tendría que ejecutar el siguiente comando ```Install-packege <Dependencia>```  
+Si la dependencia **Swashbuckle.AspNetCore** faltara solo tendría que ejecutar el siguiente comando ```install-packege <Dependencia>```  
 ejemplo:
 
-```Install-packege Swashbuckle.AspNetCore```
+```install-packege Swashbuckle.AspNetCore```
 
 ## Creación de la base de datos:
 La base de datos necesita ser creada antes de que pueda interactuar con la API, para esto necesita ejecutar el comando ```update-database``` en la consola de administrador de paquetes, este comando creará la base de datos como una instancia local de Sql Server junto con 3 registros listos para ser consultados.
@@ -95,4 +100,4 @@ Para correrlas primero es necesario agregar una referecia al proyecto de pruebas
 ### Correr pruebas
 Por último para realizar la pruebas, en la parte superior haga click sobre Test o Pruebas y después en Explorador de Pruebas o Test Explorer.
 
-En la ventana que se acaba de abrir notará las pruebas que pueden realizarse, para ello solo de click sobre el segundo ícono de izquierda a derecha de Play(triángulo verde) y eso sera todo, las pruebas se ejecutarán.
+En la ventana que se acaba de abrir notará las pruebas que pueden realizarse, para ello solo de click sobre el primer ícono de izquierda a derecha de Play(2 triángulos verdes, Correr todas las pruebas) y eso sera todo, las pruebas se ejecutarán.
